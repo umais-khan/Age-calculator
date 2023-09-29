@@ -2,12 +2,12 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins';
 }
 
 body,
 html {
-        background-color: hsl(0, 0%, 100%);
+        background-color: hsl(0, 0%, 95%);
         width: 100%;
         height: 100vh;
         display: flex;
@@ -15,24 +15,85 @@ html {
 }
 
 .container {
-        width: 75%;
-        margin: 9% 0 0 0;
-        background-color: lightblue;
+        width: 85%;
+        background-color: white;
+        margin: 5% 0 0 0;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.taking-input form input {
-        max-width: 10%;
+.inputs input {
+        width: 29%;
+        height: 160%;
+        border-radius: 1%;
+        padding: 1vh 1vw 1vh 1vw;
+        background-color: transparent;
+        border: 1.4px lightgray solid;
+}
+
+/* To hide the up and down buttons in the input field for chrome pls dont remove */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+
+/* To hide the up and down buttons in the input field for Firefox */
+input[type="number"] {
+        -moz-appearance: textfield;
 }
 
 .taking-input,
 .input-bd {
         width: 100%;
-        height: 26%;
+        height: 15%;
         display: flex;
-        justify-content: center;
         align-items: center;
 }
 
 .input-bd {
+        width: 83%;
         justify-content: space-around;
+        flex-direction: column;
+        height: fit-content;
+}
+
+.inputs {
+        width: 58%;
+        justify-content: space-around;
+        display: flex;
+}
+
+.labels {
+        justify-content: space-between;
+        width: 44%;
+        display: flex;
+        margin-right: 7vw;
+}
+
+.seperation {
+        display: flex;
+        align-items: center;
+        gap: 0.6%;
+}
+
+.horizontal-line {
+        color: grey;
+        width: 80%;
+        height: 0;
+}
+
+#submit-button {
+        background-color: hsl(259, 100%, 65%);
+        border: none;
+        cursor: pointer;
+        height: 14vh;
+        width: 6.5vw;
+        border-radius: 50%;
+        font-size: 2rem;
+}
+
+.giving-output {
+        color: hsl(259, 100%, 65%);
+        font-size: xx-large;
+        margin-left: 3rem;
 }

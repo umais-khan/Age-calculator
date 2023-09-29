@@ -6,21 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Age Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
   <div class="container">
     <div class="taking-input">
-      <form id="date-form" class=".input-bd">
-        <label>Day</label>
-        <input id="user-day" type="number" placeholder="DD">
-        <label>Month</label>
-        <input id="user-month" type="number" placeholder="MM">
-        <label>Year</label>
-        <input id="user-year" type="number" placeholder="YYYY">
+      <form id="date-form" class="input-bd">
+        <div class="labels">
+          <label>Day</label>
+          <label>Month</label>
+          <label>Year</label>
+        </div>
+        <div class="inputs">
+          <input id="user-day" type="number" placeholder="DD">
+          <input id="user-month" type="number" placeholder="MM">
+          <input id="user-year" type="number" placeholder="YYYY">
+        </div>
       </form>
     </div><br>
-    <hr><button id="submit-button">submit</button><br>
+    <div class="seperation">
+      <hr class="horizontal-line"><button id="submit-button"><i class="fa-solid fa-arrow-down"
+          style="color: #ffffff;"></i></button><br>
+    </div>
     <div class="giving-output">
       <h1 id="year-output">__ Years</h1>
       <h1 id="month-output">__ Months</h1>
