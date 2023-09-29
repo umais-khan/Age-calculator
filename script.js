@@ -14,6 +14,7 @@ const monthEl = document.getElementById("user-month")
 const yearEl = document.getElementById("user-year")
 
 const buttonEl = document.getElementById("submit-button")
+const errorEL= document.getElementById("error")
 
 const outYear =document.getElementById("year-output")
 const outMonth =document.getElementById("month-output")
@@ -22,7 +23,28 @@ const outDay =document.getElementById("day-output")
 
 //event listener to get and calculate the difference
 
-buttonEl.addEventListener('click', function() {
+buttonEl.addEventListener('click', function(e) {
+    //form validation
+    let messages = [];
+    
+    if (dayEl.value === '' || monthEl.value === '' || yearEl.value === '' ) {
+        messages.push('DOB is requred')
+    }
+
+    if (dayEl.value > currentDay || monthEl.value > currentMonth || yearEl.value > currentYear){
+        messages.push("so you're a time traveler huh?")
+    }
+
+
+    if (messages.length > 0) {
+        e.preventDefault()
+        errorEL.innerText = `error: ${messages.join(',')}`
+
+    }
+
+
+
+
     //variables for the output age
     let monthOut;
     let yearOut; 
