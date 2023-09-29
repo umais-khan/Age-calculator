@@ -12,7 +12,12 @@ const monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 const dayEl = document.getElementById("user-day")
 const monthEl = document.getElementById("user-month")
 const yearEl = document.getElementById("user-year")
+
 const buttonEl = document.getElementById("submit-button")
+
+const outYear =document.getElementById("year-output")
+const outMonth =document.getElementById("month-output")
+const outDay =document.getElementById("day-output")
 
 
 //event listener to get and calculate the difference
@@ -48,8 +53,13 @@ buttonEl.addEventListener('click', function() {
         }
 
     // show the output age
-        
+
     console.log(`day=${dayOut} month=${monthOut} year=${yearOut}`);
+
+    outYear.innerHTML = `${yearOut} years`
+    outMonth.innerHTML = `${monthOut} months`
+    outDay.innerHTML = `${dayOut} days`
+
 })
 
 
