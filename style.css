@@ -23,3 +23,16 @@ html {
 .taking-input form input {
         max-width: 10%;
 }
+
+.taking-input,
+.input-bd {
+        width: 100%;
+        height: 26%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.input-bd {
+        justify-content: space-around;
+}
