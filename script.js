@@ -31,7 +31,7 @@ buttonEl.addEventListener('click', function(e) {
         messages.push('DOB is required')
     }
 
-    if (dayEl.value > currentDay || monthEl.value > currentMonth || yearEl.value > currentYear){
+    if (yearEl.value > currentYear){
         messages.push("so you're a time traveler huh?")
     }
 
