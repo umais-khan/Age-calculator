@@ -1,23 +1,55 @@
 
+// setting up the current date into variables
+const mydate = new Date('2023-05-20'),
+    currentDay = mydate.getDate(),       
+    currentMonth = mydate.getMonth() +1,   
+    currentYear = mydate.getFullYear();    
 
+// setting a list that defines how many days are in the particular months
+const monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-
-const currentDay = 29;
-const currentMonth = 9;
-const currentYear = 2023;
-
+//get all the user input and button element
 const dayEl = document.getElementById("user-day")
 const monthEl = document.getElementById("user-month")
 const yearEl = document.getElementById("user-year")
 const buttonEl = document.getElementById("submit-button")
 
+
+//event listener to get and calculate the difference
+
 buttonEl.addEventListener('click', function() {
+    //variables for the output age
+    let monthOut;
+    let yearOut; 
+    let dayOut;
+
+    //variable for the user input DOB
     let dayValue = dayEl.value;
     let monthValue = monthEl.value;
     let yearValue = yearEl.value;
 
-    console.log(dayValue)
 
+    //calculate the difference
+
+    if(currentMonth -monthValue < 0){
+        monthOut =  currentMonth - monthValue +12
+        yearOut = currentYear-yearValue-1
+    } 
+    else {
+        monthOut = currentMonth - monthValue;
+        yearOut =  currentYear-yearValue
+    }
+
+    if(currentDay -dayValue <0){
+        monthOut = monthOut-1
+        dayOut= currentDay - dayValue + monthList[monthOut+1];
+        } else {
+        dayOut = currentDay - dayValue;
+        }
+
+    // show the output age
+        
+    console.log(`day=${dayOut} month=${monthOut} year=${yearOut}`);
 })
 
 
