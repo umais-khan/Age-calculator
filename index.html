@@ -11,20 +11,20 @@
 <body>
   <div class="container">
     <div class="taking-input">
-      <form>
+      <form id="date-form">
         <label>Day</label>
-        <input type="number" placeholder="DD">
+        <input id="user-day" type="number" placeholder="DD">
         <label>Month</label>
-        <input type="number" placeholder="MM">
+        <input id="user-month" type="number" placeholder="MM">
         <label>Year</label>
-        <input type="number" placeholder="YYYY">
+        <input id="user-year" type="number" placeholder="YYYY">
       </form>
     </div><br>
-    <hr><button>submit</button><br>
+    <hr><button id="submit-button">submit</button><br>
     <div class="giving-output">
-      <h1>__ Years</h1>
-      <h1>__ Months</h1>
-      <h1>__Days</h1>
+      <h1 id="year-output">__ Years</h1>
+      <h1 id="month-output">__ Months</h1>
+      <h1 id="day-output">__Days</h1>
     </div>
 
     <script src="script.js"></script>
