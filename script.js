@@ -16,7 +16,8 @@ buttonEl.addEventListener('click', function() {
     let monthValue = monthEl.value;
     let yearValue = yearEl.value;
 
-    
+    console.log(dayValue)
+
 })
 
 
