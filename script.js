@@ -28,7 +28,7 @@ buttonEl.addEventListener('click', function(e) {
     let messages = [];
     
     if (dayEl.value === '' || monthEl.value === '' || yearEl.value === '' ) {
-        messages.push('DOB is requred')
+        messages.push('DOB is required')
     }
 
     if (dayEl.value > currentDay || monthEl.value > currentMonth || yearEl.value > currentYear){
@@ -38,7 +38,8 @@ buttonEl.addEventListener('click', function(e) {
 
     if (messages.length > 0) {
         e.preventDefault()
-        errorEL.innerText = `error: ${messages.join(',')}`
+        errorEL.innerText = `error: ${messages.join(' and ')}`
+        return
 
     }
 
