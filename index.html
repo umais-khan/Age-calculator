@@ -10,16 +10,24 @@
 
 <body>
   <div class="container">
-    <h1>Age Calculator</h1>
-    <form>
-      <label for="birthdate">Enter your birthdate:</label>
-      <input type="date" id="birthdate" required>
-      <button type="button" onclick="calculateAge()">Calculate Age</button>
-    </form>
-    <div id="result"></div>
-  </div>
+    <div class="taking-input">
+      <form>
+        <label>Day</label>
+        <input type="number" placeholder="DD">
+        <label>Month</label>
+        <input type="number" placeholder="MM">
+        <label>Year</label>
+        <input type="number" placeholder="YYYY">
+      </form>
+    </div><br>
+    <hr><button>submit</button><br>
+    <div class="giving-output">
+      <h1>__ Years</h1>
+      <h1>__ Months</h1>
+      <h1>__Days</h1>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
