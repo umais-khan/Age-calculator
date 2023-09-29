@@ -55,6 +55,7 @@ input[type="number"] {
         justify-content: space-around;
         flex-direction: column;
         height: fit-content;
+        margin-top: 10%;
 }
 
 .inputs {
@@ -68,12 +69,14 @@ input[type="number"] {
         width: 44%;
         display: flex;
         margin-right: 7vw;
+        font-size: larger;
+        font-weight: 700;
 }
 
 .seperation {
         display: flex;
         align-items: center;
-        gap: 0.6%;
+        gap: 0.7%;
 }
 
 .horizontal-line {
@@ -96,4 +99,15 @@ input[type="number"] {
         color: hsl(259, 100%, 65%);
         font-size: xx-large;
         margin-left: 3rem;
+}
+
+.dark-mode {
+        background-color: hsl(0, 0%, 0%);
+        border: none;
+        cursor: pointer;
+        height: 14vh;
+        width: 6.5vw;
+        border-radius: 50%;
+        font-size: 2.1rem;
+        color: #ffffff;
 }
